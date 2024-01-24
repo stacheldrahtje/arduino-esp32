@@ -5,16 +5,18 @@ const char* wpa2 = "<wpa2 passcode>";
 
 void setup()
 {
-  Serial.begin(115200)
-  Serial.println("Connecting to WiFi network";
+  Serial.begin(115200);
+  Serial.println("Connecting to WiFi network");
   WiFi.begin(ssid, wpa2);
 
-  if ((WiFi.status) == "WL_CONNECTED")
+  while (WiFi.status() != WL_CONNECTED)
 {
-Serial.println("Connected");
+Serial.println("Still waiting");
 } 
-else {
-  Serial.println("Still waiting");
+if  (WiFi.status() == WL_CONNECTED)
+{
+  Serial.println("Connected");
+}
 }
 
 void loop()
