@@ -17,7 +17,8 @@ if  (WiFi.status() == WL_CONNECTED)
 {
   Serial.println("Connected");
 }
-  Serial.println("IP:"WiFi.localIP());
+  Serial.print("IP: ");
+  Serial.println(WiFi.localIP());
 
 }
 
