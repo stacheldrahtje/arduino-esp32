@@ -2,7 +2,7 @@
 
 const char* ssid = "<ssid>";
 const char* wpa2 = "<wpa2 passcode>";
-
+IPAddress test;
 void setup()
 {
   Serial.begin(115200);
@@ -17,6 +17,8 @@ if  (WiFi.status() == WL_CONNECTED)
 {
   Serial.println("Connected");
 }
+  Serial.println("IP:"WiFi.localIP());
+
 }
 
 void loop()
