@@ -1,8 +1,16 @@
 #include <WiFi.h>
 
+//Nework and Server Related Variables
 const char* ssid = "<ssid>";
 const char* wpa2 = "<wpa2 key>";
-IPAddress test;
+IPAddress localip;
+IPAddress mqtt_server_ip = (<ip, address, of, mqttserver>);
+int mqtt_server_port = 1883;
+const char* uname = "<mqtt_uname>";
+const char* passwd = "<mqtt_password>";
+
+
+
 
 void connect_wifi()
 {
